@@ -1,0 +1,158 @@
+/*
+seletor{
+    propriedade:valor;
+}
+*/
+
+body{    
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.home{
+    background-color: #003366;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 48px;
+    margin-top: 0;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.navegacao{    
+    width: 680px; /*largura*/
+    margin-top: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;    
+}
+
+/*formatando os links da área navegação*/
+.navegacao a{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.header{
+    background-image: url(img/background-imc.jpg);
+    background-size: cover; /*faz com que a imagem cubra toda a área*/    
+    text-align: center;    
+    /*espaçamento interno*/
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.content{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #555555;
+}
+
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+.content-imc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-imc input{
+    width: 300px; /*largura*/
+    height: 30px; /*altura*/
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+    box-sizing: border-box; /*Faz com que o elemento não ultrapasse as dimensões devido a padding e border*/    
+}
+
+.content-imc button{
+    width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: #003366;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*ao passar o mouse*/
+.content-imc button:hover{
+    background-color: #0050a0;
+}
+
+.content-imc table{
+    width: 350px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.content-imc tr{
+    background-color: #D9D9D9;
+}
+
+.content-imc tr:hover{
+    background-color: #c7e9f8;
+}
+
+.content-imc th{
+    background-color: #003366;
+    color: #ffffff;
+}
+
+.footer{
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer a{
+    color: #ffffff;
+}
+
+.footer a:hover{
+    color: #c7e9f8;
+}
+
+/*Para telas de no máximo 768px*/
+/*Media Queries*/
+@media (max-width: 768px){
+        
+    h1{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .header{
+        padding-top: 90px;
+        padding-bottom: 90px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .content{
+        width: 95%;
+    }
+
+    .content-imc{
+        flex-direction: column;
+        row-gap: 20px; /*espaço entre as linhas*/
+    }
+    .content-imc table, .content-imc input{
+        width: 100%;
+    }
+
+}
